@@ -1,0 +1,11 @@
+[
+	{
+		"caption": "Build",
+		"mnemonic": "B",
+		"id": "build",
+		"children":
+		[
+			{ "command": "ahkexec", "caption": "AHK Exec"}
+		]
+	}
+]

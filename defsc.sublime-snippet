@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+#ClipboardTimeout 10000
+#SingleInstance force
+#InstallKeybdHook
+
+$1
+]]></content>
+<tabTrigger>defsc</tabTrigger>
+</snippet>
