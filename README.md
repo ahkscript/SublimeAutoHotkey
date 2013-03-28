@@ -1,4 +1,4 @@
-AutoHotkey
+AutoHotkey - Syntax Package for Sublime Text 2/3
 ==========
 
 AutoHotkey language package for SublimeText includes syntax highlighting, comments, autocompletions, and an ahkexec command to run the current code in the buffer without the need to save the file.
