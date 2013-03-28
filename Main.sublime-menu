@@ -1,11 +1,12 @@
 [
 	{
-		"caption": "Build",
-		"mnemonic": "B",
-		"id": "build",
-		"children":
+     "caption": "Tools",
+     "mnemonic": "T",
+     "id": "tools",
+     "children":
 		[
-			{ "command": "ahkexec", "caption": "AHK Exec"}
+			{ "caption": "-"},
+			{ "command": "ahkexec", "caption": "AutoHotkey - Run Buffer"}
 		]
 	}
 ]
