@@ -5,17 +5,6 @@ from ctypes import *
 
 class ahkexec(sublime_plugin.TextCommand):
 
-	# SET YOUR SETTINGS HERE
-	# Specify a 'key'(name it whatever you want) and assign it
-	# a 'value'(string) containing the path to the AHK executable.
-	# This allows the user to run code using different AHK flavors.
-	# When calling the command, pass the 'key' as the argument and
-	# the command will use the corresponding AHK executable.
-	# NOTE: By default, it passes the key 'default', do not rename
-	#       this key.
-	ahk = {'default': 'C:\\Program Files\\AutoHotkey\\AutoHotkey.exe'}
-	# ahk = {'default': 'D:\\PortableApps\\AutoHotkey\\AutoHotKey_C\\AutoHotkey.exe'}
-
 	def get_code(self):
 		# check if there's a selection
 		code_sel = self.view.substr(self.view.sel()[0])
@@ -87,8 +76,9 @@ class ahkexec(sublime_plugin.TextCommand):
 class ahkexecCommand(ahkexec):
 
 	def run(self, edit, version='default'):
-		# Set AHK dir
-		self.ahkpath = ahkexec.ahk[version]
+		# Loads the path to AutoHotkey.exe from AutoHotKey.sublime-settings
+		self.ahkpath = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyEXEPath")[version]
+
 		# Peform case-insensitive search
 		re.I
 		# Continue only if syntax used is AutoHotkey or Plain text

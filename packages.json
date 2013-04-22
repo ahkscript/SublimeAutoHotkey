@@ -1,0 +1,20 @@
+{
+	"schema_version": "1.2",
+	"packages": [
+		{
+			"name": "AutoHotkey",
+			"description": "AutoHotkey language package including syntax highlighting, comments toggle, autocompletions, and an ahkexec command",
+			"author": "robertcollier4",
+			"homepage": "https://github.com/robertcollier4/AutoHotkey",
+			"last_modified": "2013-04-23 10:05:00",
+			"platforms": {
+				"windows": [
+					{
+						"version": "1.0.0",
+						"url": "https://nodeload.github.com/robertcollier4/AutoHotkey/zip/master"
+					}
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+    // Set here path to AutoHotkey.exe executable to use for the ahkexec command
+    // By default, if no argument is passed to the ahkexec command, it uses the key 'default', do not rename this key.
+    // To run code using different AHK flavors, Specify additional 'key'(name it whatever you want) here and assign it a 'value'(string) containing the path to the AHK executable. Then when calling the ahkexec command, pass the 'key' as argument to ahkexec command to use that corresponding AHK executable.
+    "AutoHotKeyEXEPath": {
+    	"default": "C:\\Program Files\\AutoHotkey\\AutoHotkey.exe"
+    }
+}

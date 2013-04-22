@@ -1,6 +1,6 @@
 AutoHotkey - Syntax Package for Sublime Text 2/3
 ==========
 
-AutoHotkey language package for SublimeText includes syntax highlighting, comments, autocompletions, and an ahkexec command to run the current code in the buffer without the need to save the file.
+AutoHotkey language package for SublimeText including syntax highlighting, comments toggling, autocompletions, and an ahkexec command.
 
-If the location of your AutoHotkey.exe executable is not "C:\Program Files\AutoHotkey\AutoHotkey.exe" then you will need to set it at the top of ahkexec.py
+The ahkexec command will run the code in the current buffer by piping it as a temporary string to the AutoHotkey.exe executable. This enables you to run and test AutoHotkey scripts without needing to save them to a file first. The location of your AutoHotkey.exe executable will need to be set in AutoHotkey.sublime-settings.
