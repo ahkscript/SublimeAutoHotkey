@@ -1,12 +1,33 @@
 [
 	{
-     "caption": "Tools",
-     "mnemonic": "T",
-     "id": "tools",
-     "children":
+	 "caption": "Tools",
+	 "mnemonic": "T",
+	 "id": "tools",
+	 "children":
 		[
-			{ "caption": "-"},
-			{ "command": "ahkexec", "caption": "AutoHotkey - Run Buffer As Piped String"}
+			{ "caption": "-", "id": "build" },
+			{ "command": "ahkexec", "caption": "AutoHotkey - Run Piped Buffer"}
+		]
+	},
+	{
+		"caption": "Preferences",
+		"mnemonic": "n",
+		"id": "preferences",
+		"children":
+		[
+			{
+				"caption": "Package Settings",
+				"mnemonic": "P",
+				"id": "package-settings",
+				"children":
+				[
+					{
+						"command": "open_file",
+						"args": {"file": "${packages}/AutoHotkey/AutoHotkey.sublime-settings"},
+						"caption": "AutoHotkey Settings"
+					}
+				]
+			}
 		]
 	}
 ]
