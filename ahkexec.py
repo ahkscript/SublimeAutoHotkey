@@ -3,6 +3,16 @@ import subprocess
 import re
 from ctypes import *
 
+# The ahkbuild command is called as target by AutoHotkey.sublime-build
+class ahkbuild(sublime_plugin.WindowCommand):
+
+	def run(self):
+		filepath = self.window.active_view().file_name()
+		ahkpath = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyEXEPath")["default"]
+		cmd = [ahkpath, "/ErrorStdOut", filepath]
+		self.window.run_command("exec", {"cmd": cmd})
+
+# The ahkexec command will run the code in the current buffer by piping it as a temporary string to the AutoHotkey.exe executable. This enables you to run and test AutoHotkey scripts without needing to save them to a file first.
 class ahkexec(sublime_plugin.TextCommand):
 
 	def get_code(self):

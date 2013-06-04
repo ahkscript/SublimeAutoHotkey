@@ -6,7 +6,7 @@
      "children":
 		[
 			{ "caption": "-"},
-			{ "command": "ahkexec", "caption": "AutoHotkey - Run Buffer"}
+			{ "command": "ahkexec", "caption": "AutoHotkey - Run Buffer As Piped String"}
 		]
 	}
 ]
