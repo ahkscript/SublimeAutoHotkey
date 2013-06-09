@@ -5,7 +5,7 @@
 	 "id": "tools",
 	 "children":
 		[
-			{ "caption": "-", "id": "build" },
+			{ "caption": "-", "id": "packagecommands" },
 			{ "command": "ahkexec", "caption": "AutoHotkey - Run Piped Buffer"}
 		]
 	},
@@ -21,10 +21,21 @@
 				"id": "package-settings",
 				"children":
 				[
-					{
-						"command": "open_file",
-						"args": {"file": "${packages}/AutoHotkey/AutoHotkey.sublime-settings"},
-						"caption": "AutoHotkey Settings"
+                    {
+                        "caption": "AutoHotkey",
+                        "children":
+                        [
+							{
+								"command": "open_file",
+								"args": {"file": "${packages}/AutoHotkey/AutoHotkey.sublime-settings"},
+								"caption": "AutoHotkey Settings - Default"
+							},
+							{
+								"command": "open_file",
+								"args": {"file": "${packages}/User/AutoHotkey.sublime-settings"},
+								"caption": "AutoHotkey Settings - User"
+							}
+						]
 					}
 				]
 			}
