@@ -1,0 +1,11 @@
+<snippet>
+	<content>#NoEnv
+#SingleInstance Force
+SetBatchLines -1
+ListLines Off
+
+</content>
+	<scope>source.ahk</scope>
+</snippet>
+
+<!-- http://www.autohotkey.com/docs/misc/Performance.htm -->

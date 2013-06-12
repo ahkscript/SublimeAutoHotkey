@@ -33,10 +33,23 @@
 			<string>comment.block.slashstar.ahk</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.label.ahk</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>comment.line.semicolon.label.ahk</string>
+				</dict>
+			</dict>
 			<key>match</key>
-			<string>^[\w]*:$</string>
+			<string>^(\w+:)\s*(;.*)?$</string>
 			<key>name</key>
-			<string>entity.name.function.label.ahk</string>
+			<string>labelline.autohotkey</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -60,9 +73,14 @@
 					<key>name</key>
 					<string>string.parameter.directives.ahk</string>
 				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>comment.line.semicolon.directive.ahk</string>
+				</dict>
 			</dict>
 			<key>match</key>
-			<string>#\b(?i:AllowSameLineComments|ClipboardTimeout|CommentFlag|ErrorStdOut|EscapeChar|HotkeyInterval|HotkeyModifierTimeout|Hotstring|IfWinActive|IfWinExist|Include|InstallKeybdHook|InstallMouseHook|KeyHistory|MaxHotkeysPerInterval|MaxMem|MaxThreads|MaxThreadsBuffer|MaxThreadsPerHotkey|NoEnv|NoTrayIcon|Persistent|SingleInstance|UseHook|WinActivateForce)\b(.*)$</string>
+			<string>#\b(?i:AllowSameLineComments|ClipboardTimeout|CommentFlag|ErrorStdOut|EscapeChar|HotkeyInterval|HotkeyModifierTimeout|Hotstring|IfWinActive|IfWinExist|Include|InstallKeybdHook|InstallMouseHook|KeyHistory|MaxHotkeysPerInterval|MaxMem|MaxThreads|MaxThreadsBuffer|MaxThreadsPerHotkey|NoEnv|NoTrayIcon|Persistent|SingleInstance|UseHook|WinActivateForce)\b(.*)(;.*)$</string>
 			<key>name</key>
 			<string>keyword.control.directives.ahk</string>
 		</dict>
