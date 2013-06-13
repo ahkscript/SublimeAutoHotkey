@@ -10,8 +10,8 @@
 			"platforms": {
 				"windows": [
 					{
-						"version": "1.2.1",
-						"url": "https://nodeload.github.com/robertcollier4/AutoHotkey/zip/1.2.1"
+						"version": "1.2.2",
+						"url": "https://nodeload.github.com/robertcollier4/AutoHotkey/zip/1.2.2"
 					}
 				]
 			}
