@@ -141,7 +141,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>[-+*/&amp;]?=|.=|::</string>
+			<string>[-+*:/&amp;]?=|::</string>
 			<key>name</key>
 			<string>keyword.operator.assignment.ahk</string>
 		</dict>
