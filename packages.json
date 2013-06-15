@@ -6,12 +6,12 @@
 			"description": "AutoHotkey language package including syntax highlighting, comments toggle, autocompletions, and an ahkexec command",
 			"author": "robertcollier4",
 			"homepage": "https://github.com/robertcollier4/AutoHotkey",
-			"last_modified": "2013-04-23 10:05:00",
+			"last_modified": "2013-06-14 16:00:00",
 			"platforms": {
 				"windows": [
 					{
-						"version": "1.2.3",
-						"url": "https://nodeload.github.com/robertcollier4/AutoHotkey/zip/1.2.3"
+						"version": "1.2.4",
+						"url": "https://nodeload.github.com/robertcollier4/AutoHotkey/zip/1.2.4"
 					}
 				]
 			}
