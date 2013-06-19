@@ -1,6 +1,14 @@
 [
+	{
+		"caption": "AutoHotkey - Run",
+		"command": "ahkrun"
+	},
     {
-        "caption": "AutoHotkey - Run Buffer",
-        "command": "ahkexec"
-    }
+        "caption": "AutoHotkey - Compile",
+        "command": "ahkcompile"
+    },
+	{
+		"caption": "AutoHotkey - Run As Piped Buffer",
+		"command": "ahkrunpiped"
+	}
 ]

@@ -6,7 +6,9 @@
 	 "children":
 		[
 			{ "caption": "-", "id": "packagecommands" },
-			{ "command": "ahkexec", "caption": "AutoHotkey - Run Piped Buffer"}
+			{ "command": "ahkrun", "caption": "AutoHotkey - Run"},
+			{ "command": "ahkcompile", "caption": "AutoHotkey - Compile"},
+			{ "command": "ahkrunpiped", "caption": "AutoHotkey - Run As Piped Buffer"}
 		]
 	},
 	{

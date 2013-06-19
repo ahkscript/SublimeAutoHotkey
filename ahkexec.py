@@ -4,17 +4,23 @@ import re
 from ctypes import *
 
 # The ahkbuild command is called as target by AutoHotkey.sublime-build
-class ahkbuild(sublime_plugin.WindowCommand):
-
+class ahkrun(sublime_plugin.WindowCommand):
 	def run(self):
 		filepath = self.window.active_view().file_name()
-		ahkpath = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyEXEPath")["default"]
+		ahkpath = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyExePath")["default"]
 		cmd = [ahkpath, "/ErrorStdOut", filepath]
 		self.window.run_command("exec", {"cmd": cmd})
 
-# The ahkexec command will run the code in the current buffer by piping it as a temporary string to the AutoHotkey.exe executable. This enables you to run and test AutoHotkey scripts without needing to save them to a file first.
-class ahkexec(sublime_plugin.TextCommand):
+class ahkcompile(sublime_plugin.WindowCommand):
+	def run(self):
+		filepath = self.window.active_view().file_name()
+		Ahk2ExePath = sublime.load_settings("AutoHotkey.sublime-settings").get("Ahk2ExePath")["default"]
+		cmd = [Ahk2ExePath, "/in", filepath]
+		self.window.run_command("exec", {"cmd": cmd})
 
+# http://www.autohotkey.com/board/topic/23575-how-to-run-dynamic-script-through-a-pipe/
+# The ahkrunpiped command will run the code in the current buffer by piping it as a temporary string to the AutoHotkey.exe executable. This enables you to run and test AutoHotkey scripts without needing to save them to a file first.
+class ahkrunpiped(sublime_plugin.TextCommand):
 	def get_code(self):
 		# check if there's a selection
 		code_sel = self.view.substr(self.view.sel()[0])
@@ -83,7 +89,7 @@ class ahkexec(sublime_plugin.TextCommand):
 		return pid
 
 
-class ahkexecCommand(ahkexec):
+class ahkrunpipedCommand(ahkrunpiped):
 
 	def run(self, edit, version='default'):
 		# Loads the path to AutoHotkey.exe from AutoHotKey.sublime-settings
@@ -93,7 +99,7 @@ class ahkexecCommand(ahkexec):
 		re.I
 		# Continue only if syntax used is AutoHotkey or Plain text
 		if not re.search("(AutoHotkey|AHK|Plain text)", self.view.settings().get('syntax')):
-			print("ahkexec[cancelled] - Not an AHK code")
+			print("ahkrunpiped[cancelled] - Not an AHK code")
 			return False
 
 		filename = self.view.file_name()
@@ -103,12 +109,12 @@ class ahkexecCommand(ahkexec):
 				self.run_code(x['code'])
 			else:
 				subprocess.Popen([self.ahkpath, filename])
-			print("ahkexec[file" +
+			print("ahkrunpiped[file" +
 			     ("/selection] - " if x['sel'] else "] - '") +
 			     filename + "'")
 		else:
 			pid = self.run_code(x['code'])
-			print("ahkexec[unsaved" +
+			print("ahkrunpiped[unsaved" +
 			     ("/selection] - " if x['sel'] else "] - ") +
 			     str(pid) + "[PID]")
 
