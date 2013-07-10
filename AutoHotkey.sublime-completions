@@ -257,7 +257,7 @@
             { "trigger": "IsLabel(LabelName)", "contents": "IsLabel(${1:LabelName})" },
             { "trigger": "Ln(Number)", "contents": "Ln(${1:Number})" },
             { "trigger": "Log(Number)", "contents": "Log(${1:Number})" },
-            { "trigger": "LV_Add()", "contents": "LV_Add({1:[Options}, ${2:Col1}, ${3:Col2}, ${4:...]})" },
+            { "trigger": "LV_Add()", "contents": "LV_Add(${1:[Options}, ${2:Col1}, ${3:Col2}, ${4:...]})" },
             { "trigger": "LV_Delete()", "contents": "LV_Delete(${1:[RowNumber]})" },
             { "trigger": "LV_DeleteCol()", "contents": "LV_DeleteCol(${1:ColumnNumber})" },
             { "trigger": "LV_GetCount()", "contents": "LV_GetCount(${1:[\"S\"]})" },
