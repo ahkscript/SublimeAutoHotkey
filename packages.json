@@ -6,7 +6,7 @@
 			"description": "AutoHotkey language package including syntax highlighting, comments toggle, autocompletions, and an ahkrunpiped command",
 			"author": "robertcollier4",
 			"homepage": "https://github.com/robertcollier4/AutoHotkey",
-			"last_modified": "2013-06-19 16:00:00",
+			"last_modified": "2013-07-12 16:00:00",
 			"platforms": {
 				"windows": [
 					{

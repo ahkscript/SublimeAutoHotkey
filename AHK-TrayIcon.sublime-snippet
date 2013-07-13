@@ -1,0 +1,9 @@
+<snippet>
+	<content>SplitPath, A_ScriptName, , , , thisscriptname
+If( !A_IsCompiled && FileExist(A_ScriptDir . "\" . thisscriptname . ".ico")) {
+	Menu, Tray, Icon, %A_ScriptDir%\%thisscriptname%.ico
+}
+
+</content>
+	<scope>source.ahk</scope>
+</snippet>
