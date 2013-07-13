@@ -151,7 +151,7 @@
             { "trigger": "RegWrite", "contents": "RegWrite, ${1:REG_SZ|REG_EXPAND_SZ|REG_MULTI_SZ|REG_DWORD|REG_BINARY}, ${2:HKLM|HKU|HKCU|HKCR|HKCC}, ${3:SubKey [}, ${4:ValueName}, ${5:Value]}" },
             { "trigger": "Reload", "contents": "Reload" },
             { "trigger": "Repeat", "contents": "Repeat" },
-            { "trigger": "return", "contents": "return" },
+            { "trigger": "Return", "contents": "Return" },
             { "trigger": "Run", "contents": "Run, ${1:Target [}, ${2:WorkingDir}, ${3:Max|Min|Hide|UseErrorLevel}, ${4:OutputVarPID]}" },
             { "trigger": "RunAs", "contents": "RunAs, ${1:[ User}, ${2:Password}, ${3:Domain]}" },
             { "trigger": "RunWait", "contents": "RunWait, ${1:Target [}, ${2:WorkingDir}, ${3:Max|Min|Hide|UseErrorLevel}, ${4:OutputVarPID]}" },

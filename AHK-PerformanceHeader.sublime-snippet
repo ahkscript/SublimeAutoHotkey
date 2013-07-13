@@ -1,0 +1,16 @@
+<snippet>
+	<content>#NoEnv
+#SingleInstance Force
+SetBatchLines -1
+ListLines Off
+SendMode Input ;Forces Send and SendRaw to use SendInput buffering for speed.
+; SetWinDelay, -1 ;Remove short delay (sleep) done automatically after every windowing command except IfWinActive and IfWinExist
+; SetKeyDelay, -1, -1 ;a delay of -1 will never sleep between key sends, no PressDuration Delay
+; SetTitleMatchMode, 3 ;A window's title must exactly match WinTitle to be a match.
+
+
+</content>
+	<scope>source.ahk</scope>
+</snippet>
+
+<!-- http://www.autohotkey.com/docs/misc/Performance.htm -->
