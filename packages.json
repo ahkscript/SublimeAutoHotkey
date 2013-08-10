@@ -1,20 +1,15 @@
 {
-	"schema_version": "1.2",
+	"schema_version": "2.0",
 	"packages": [
 		{
-			"name": "AutoHotkey",
-			"description": "AutoHotkey language package including syntax highlighting, comments toggle, autocompletions, and an ahkrunpiped command",
-			"author": "robertcollier4",
-			"homepage": "https://github.com/robertcollier4/AutoHotkey",
-			"last_modified": "2013-07-12 16:00:00",
-			"platforms": {
-				"windows": [
-					{
-						"version": "1.2.8",
-						"url": "https://nodeload.github.com/robertcollier4/AutoHotkey/zip/1.2.8"
-					}
-				]
-			}
+			"details": "https://github.com/robertcollier4/AutoHotkey",
+			"releases": [
+				{
+					"sublime_text": "*",
+					"platforms": "windows",
+					"details": "https://github.com/robertcollier4/AutoHotkey/tags"
+				}
+			]
 		}
 	]
 }

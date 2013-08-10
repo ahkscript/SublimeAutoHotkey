@@ -27,7 +27,7 @@
             { "trigger": "#NoEnv", "contents": "#NoEnv" },
             { "trigger": "#NoTrayIcon", "contents": "#NoTrayIcon" },
             { "trigger": "#Persistent", "contents": "#Persistent" },
-            { "trigger": "#SingleInstance [force|ignore|off]", "contents": "#SingleInstance ${1:[force|ignore|off]}" },
+            { "trigger": "#SingleInstance", "contents": "#SingleInstance ${1:[force|ignore|off]}" },
             { "trigger": "#UseHook [On|Off]", "contents": "#UseHook [On|Off]" },
             { "trigger": "#WinActivateForce", "contents": "#WinActivateForce" },
             { "trigger": "BlockInput", "contents": "BlockInput, ${1:On|Off|Send|Mouse|SendAndMouse|Default|MouseMove|MouseMoveOff}" },
