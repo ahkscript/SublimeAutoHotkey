@@ -8,7 +8,7 @@
 			{ "caption": "-", "id": "packagecommands" },
 			{ "command": "ahkrun", "caption": "AutoHotkey - Run"},
 			{ "command": "ahkcompile", "caption": "AutoHotkey - Compile"},
-			{ "command": "ahkrunpiped", "caption": "AutoHotkey - Run As Piped Buffer"}
+			{ "command": "ahkrunpiped", "caption": "AutoHotkey - Run As Piped Buffer", "mnemonic": "P"}
 		]
 	},
 	{

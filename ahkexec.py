@@ -1,5 +1,6 @@
 import sublime, sublime_plugin
 import subprocess
+import os
 import re
 from ctypes import *
 
@@ -65,7 +66,7 @@ class ahkrunpiped(sublime_plugin.TextCommand):
 			print("Failed to create named pipe.")
 			return False
 
-		pid = subprocess.Popen([self.ahkpath, pipe]).pid
+		pid = subprocess.Popen([self.ahkpath, pipe], cwd=os.path.expanduser("~")).pid
 		if not pid:
 			print('Could not open file: "' + pipe + '"')
 			return False
@@ -74,7 +75,7 @@ class ahkrunpiped(sublime_plugin.TextCommand):
 		windll.kernel32.CloseHandle(__PIPE_GA_)
 		windll.kernel32.ConnectNamedPipe(__PIPE_, None)
 
-		script = unichr(0xfeff) + code
+		script = chr(0xfeff) + code
 		written = c_ulong(0)
 
 		fSuccess = windll.kernel32.WriteFile(__PIPE_,
@@ -93,7 +94,7 @@ class ahkrunpipedCommand(ahkrunpiped):
 
 	def run(self, edit, version='default'):
 		# Loads the path to AutoHotkey.exe from AutoHotKey.sublime-settings
-		self.ahkpath = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyEXEPath")[version]
+		self.ahkpath = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyExePath")[version]
 
 		# Peform case-insensitive search
 		re.I
@@ -108,7 +109,7 @@ class ahkrunpipedCommand(ahkrunpiped):
 			if x['sel']:
 				self.run_code(x['code'])
 			else:
-				subprocess.Popen([self.ahkpath, filename])
+				subprocess.Popen([self.ahkpath, filename], cwd=os.path.dirname(filename))
 			print("ahkrunpiped[file" +
 			     ("/selection] - " if x['sel'] else "] - '") +
 			     filename + "'")
