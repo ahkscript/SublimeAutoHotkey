@@ -10,7 +10,8 @@ class ahkrun(sublime_plugin.WindowCommand):
 		filepath = self.window.active_view().file_name()
 		ahkpath = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyExePath")["default"]
 		cmd = [ahkpath, "/ErrorStdOut", filepath]
-		self.window.run_command("exec", {"cmd": cmd})
+		regex = "(.*) \(([0-9]*)\)() : ==> (.*)"
+		self.window.run_command("exec", {"cmd": cmd, "file_regex": regex})
 
 class ahkcompile(sublime_plugin.WindowCommand):
 	def run(self):
