@@ -2,6 +2,7 @@
     // Set here path to AutoHotkey.exe executable to use for the build and ahkrunpiped command
     // By default, if no argument is passed to the ahkrunpiped command, it uses the key 'default', do not rename this key.
     // To run code using different AHK flavors, Specify additional 'key'(name it whatever you want) here and assign it a 'value'(string) containing the path to the AHK executable. Then when calling the ahkrunpiped command, pass the 'key' as argument to ahkrunpiped command to use that corresponding AHK executable.
+    "word_separators": "./\\()\"'-:,.;<>~!@#$^&*|+=[]{}`~?",
     "AutoHotKeyExePath": {
     	"default": "C:\\Program Files\\AutoHotkey\\AutoHotkey.exe"
     	// "PortableClassic": "D:\\PortableApps\\AutoHotkey\\AutoHotKey_C\\AutoHotkey.exe"
