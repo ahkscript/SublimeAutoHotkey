@@ -263,7 +263,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-            <string>^(\w+)(\()(.*)(\))\s*({)\s*(;?.*)$</string>
+            <string>^(\s*\w+)(\()(.*)(\))\s*({)\s*(;?.*)$</string>
             <key>name</key>
             <string>functionline.ahk</string>
         </dict>
