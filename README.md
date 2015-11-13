@@ -3,12 +3,13 @@ AutoHotkey AHK language package for SublimeText including syntax highlighting, c
 
 ## Package Installation
 * Manual method: Download ZIP from github. Extract the files to [Sublime_Data_Dir](http://docs.sublimetext.info/en/latest/basic_concepts.html#the-data-directory)\Packages\AutoHotkey
-* Automatic method: Use [wbond package control](https://sublime.wbond.net/).
+* Automatic method: Install 'AutoHotkey' from [Package Control](http://packagecontrol.io).
 
 ## Key Bindings
 If you have the default Sublime keybindings intact, then:
 * <kbd>Ctrl+B</kbd> will run the current file (with AutoHotkey.exe)
 * <kbd>Ctrl+Shift+B</kbd> will compile the current file (with Ahk2Exe.exe)
+* <kbd>Ctrl+Alt+H</kbd> will open a popup help for the keyword under the cursor.
 
 ## Advanced Configuration
 For the build system and ahkrun, ahkrunpiped, and ahkcompile commands, if you have a non-default installation then you will need to set your specific path to AutoHotkey.exe and Ahk2Exe.exe in a file named AutoHotkey.sublime-settings in your User folder. You can access these settings file from the Menu `Preferences > Package Settings > AutoHotkey`. You should make a copy of `AutoHotkey Settings - Default` at `AutoHotkey Settings - User` and modify there since then any settings defined in your User folder will take precedence and the package can still update itself without overwriting your custom settings.
