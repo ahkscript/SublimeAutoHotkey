@@ -1,0 +1,3 @@
+[
+    {"command": "ahk_popup_help", "keys": ["ctrl+shift+l"]}
+]
