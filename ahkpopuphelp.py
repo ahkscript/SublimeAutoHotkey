@@ -13,10 +13,6 @@ class AhkPopupHelpCommand(sublime_plugin.TextCommand):
 		Runs the AhkPopupHelpCommand class
 		'''
 
-		scopes = self.view.scope_name( self.view.sel()[0].begin() )
-		if scopes.find('source.ahk') != 0:
-			print ('[AHK Popup Help] Not AutoHotkey code')
-			return
 		if int(sublime.version()) < 3070:
 			print ('[AHK Popup Help] Sublime Text version not supported. Please update to v3')
 			return
@@ -24,10 +20,13 @@ class AhkPopupHelpCommand(sublime_plugin.TextCommand):
 		r,c = self.view.rowcol(self.view.sel()[0].begin())
 		line = self.view.substr( self.view.line( self.view.sel()[0] ) )
 
-		#fp = re.sub('.*[ \t,=\+\-\*\?\:\(\%\\\/\!\<\>\.]', '', line[0:c])
-		fp = re.sub('.*[^a-zA-Z#]', '', line[0:c])
+		fp = re.sub('.*[^a-z#]', '', line[0:c], flags=re.IGNORECASE)
+		if fp != line[0:c]:
+			if line[0:c][-len(fp)-1] == '.':
+				fp = '.' + fp
+
 		line = (fp+line[c:]).strip()
-		keyword = re.findall('^[a-zA-Z#]+\(?', line)[0].lower()
+		keyword = re.findall('^\.?[a-zA-Z#]+\(?', line)[0].lower()
 
 		folderpath = sublime.packages_path() + '/AutoHotkey/'
 		if not os.path.isfile(folderpath + 'AutoHotkey.sublime-completions'):
@@ -40,6 +39,7 @@ class AhkPopupHelpCommand(sublime_plugin.TextCommand):
 		display = ''
 		if keyword[-1:] == '(':
 			keyword += ')'
+		print(keyword)
 		for k in obj['completions']:
 			if keyword == k['trigger'].lower():
 				display = k['contents']
