@@ -20,7 +20,7 @@ The ahkrunpiped command will allow you to run your code as a piped text string t
 * If no text is selected - ahkrunpiped will pipe and run the entire contents of the current document.
 
 ## ahkpopuphelp
-The ahkpopuphelp command shows a popup when it is called while the cursor (i.e. caret) is on a keyword. Its default key binding is <kbd>Ctrl+Alt+H</kbd>. This feature only works in Sublime Text builds prior to 3070. For past versions, this shows a console message stating this fact.
+The ahkpopuphelp command shows a popup when it is called while the cursor (i.e. caret) is on a command, function or directive. Its default key binding is <kbd>Ctrl+Alt+H</kbd>. This feature works only in Sublime Text builds prior to 3070. For past versions, this shows a console message stating this fact.
 
 ## Goto-documentation Integration
 Instructions on how to configure goto-documentation plugin for AutoHotkey (F1 Hotkey will take you to documentation for word under cursor)
