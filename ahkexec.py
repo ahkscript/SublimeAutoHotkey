@@ -4,23 +4,14 @@ import os
 import re
 from ctypes import *
 
+from .utils import find_in_settings
+
 # The ahkbuild command is called as target by AutoHotkey.sublime-build
 class ahkrun(sublime_plugin.WindowCommand):
 	def run(self):
 		filepath = self.window.active_view().file_name()
 
-		AutoHotKeyExePathList = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyExePath")
-		AutoHotKeyExePath = ""
-		for AutoHotKeyExePath in AutoHotKeyExePathList:
-			if os.path.isfile(AutoHotKeyExePath):
-				# print ("Found AutoHotKeyExePath=" + AutoHotKeyExePath)
-				break
-			else:
-				# print ("Not Found AutoHotKeyExePath=" + AutoHotKeyExePath)
-				continue
-		# Also try old settings format where path is stored as a named-key in a dictionary.
-		if not os.path.isfile(AutoHotKeyExePath):
-			AutoHotKeyExePath = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyExePath")["default"]
+		AutoHotKeyExePath = find_in_settings("AutoHotKeyExePath")
 
 		cmd = [AutoHotKeyExePath, "/ErrorStdOut", filepath]
 		regex = "(.*) \(([0-9]*)\)() : ==> (.*)"
@@ -30,18 +21,7 @@ class ahkcompile(sublime_plugin.WindowCommand):
 	def run(self):
 		filepath = self.window.active_view().file_name()
 
-		Ahk2ExePathList = sublime.load_settings("AutoHotkey.sublime-settings").get("Ahk2ExePath")
-		Ahk2ExePath = ""
-		for Ahk2ExePath in Ahk2ExePathList:
-			if os.path.isfile(Ahk2ExePath):
-				# print ("Found Ahk2ExePath=" + Ahk2ExePath)
-				break
-			else:
-				# print ("Not Found Ahk2ExePath=" + Ahk2ExePath)
-				continue
-		# Also try old settings format where path is stored as a named-key in a dictionary.
-		if not os.path.isfile(Ahk2ExePath):
-			Ahk2ExePath = sublime.load_settings("AutoHotkey.sublime-settings").get("Ahk2ExePath")["default"]
+		Ahk2ExePath = find_in_settings("Ahk2ExePath")
 
 		cmd = [Ahk2ExePath, "/in", filepath]
 		self.window.run_command("exec", {"cmd": cmd})
@@ -121,19 +101,7 @@ class ahkrunpipedCommand(ahkrunpiped):
 
 	def run(self, edit, version='default'):
 
-		AutoHotKeyExePathList = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyExePath")
-		AutoHotKeyExePath = ""
-		for AutoHotKeyExePath in AutoHotKeyExePathList:
-			if os.path.isfile(AutoHotKeyExePath):
-				self.ahkpath = AutoHotKeyExePath
-				# print ("Found AutoHotKeyExePath=" + AutoHotKeyExePath)
-				break
-			else:
-				# print ("Not Found AutoHotKeyExePath=" + AutoHotKeyExePath)
-				continue
-		# For backwards compatability with old User .sublime-settings files, also try old settings format where path is stored as a key-value pair in a dictionary.
-		if not os.path.isfile(AutoHotKeyExePath):
-			self.ahkpath = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyExePath")["default"]
+		self.ahkpath = find_in_settings("AutoHotKeyExePath")
 
 		# Peform case-insensitive search
 		re.I
