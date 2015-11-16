@@ -1,0 +1,8 @@
+[
+  // Go to AHK documentation
+  { "keys": ["f1"], "command":"ahkgotodocs", "context":
+    [
+      { "key": "selector", "operator": "equal", "operand": "source.ahk" }
+    ]
+  },
+]
