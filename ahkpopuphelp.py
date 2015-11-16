@@ -39,7 +39,6 @@ class AhkPopupHelpCommand(sublime_plugin.TextCommand):
 		display = ''
 		if keyword[-1:] == '(':
 			keyword += ')'
-		print(keyword)
 		for k in obj['completions']:
 			if keyword == k['trigger'].lower():
 				display = k['contents']
