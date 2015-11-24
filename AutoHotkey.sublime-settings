@@ -21,6 +21,11 @@
     "Ahk2ExePath": [  "C:\\Program Files\\AutoHotkey\\Compiler\\Ahk2Exe.exe",
                         "C:\\Program Files (x86)\\AutoHotkey\\Compiler\\Ahk2Exe.exe",
                         "C:\\PortableApps\\AutoHotkey\\AutoHotKey_C\\Compiler\\Ahk2Exe.exe",
-                        "C:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\Compiler\\Ahk2Exe.exe"]
+                        "C:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\Compiler\\Ahk2Exe.exe"],
+
+    "AhkHelpPath": [  "C:\\Program Files\\AutoHotkey\\AutoHotkey.chm",
+                        "C:\\Program Files (x86)\\AutoHotkey\\AutoHotkey.chm",
+                        "C:\\PortableApps\\AutoHotkey\\AutoHotKey_C\\AutoHotkey.chm",
+                        "C:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\AutoHotkey.chm"]
 
 }
