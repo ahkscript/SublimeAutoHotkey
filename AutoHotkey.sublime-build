@@ -5,7 +5,7 @@
 	"variants": [
 		{
 			"name": "Run",
-			"target": "ahkcompile",
+			"target": "ahkcompile"
 		}
 	]
 
