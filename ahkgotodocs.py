@@ -6,12 +6,23 @@ from .utils import find_in_settings
 class ahkgotodocs(sublime_plugin.TextCommand):
 	def run(self, edit):
 		for region in self.view.sel():
-			word = self.view.word(region)
-			if not word.empty():
-				keyword = self.view.substr(word)
-				sublime.status_message("AutoHotkey Help: " + keyword)
+			word = self.view.substr(region)
 
-				self.ahkgotodocs_hh(keyword)
+			# If no selection, find word contained by whitespace
+			if len(word) == 0:
+				word = self.view.substr(self.view.word(region))
+
+			if len(word) != 0:
+				
+				# Remove non-alpha characters
+				wordalphaonly = ''
+				for ch in word:
+					if(ch.isalpha()):
+						wordalphaonly += ch
+				word = wordalphaonly
+
+				sublime.status_message("AHKGOTODOCS Loading Documentation For: " + word)
+				self.ahkgotodocs_hh(word)
 				# self.ahkgotodocs_url(keyword)
 
 	def ahkgotodocs_hh(self, keyword):
