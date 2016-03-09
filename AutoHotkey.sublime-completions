@@ -329,6 +329,7 @@
             { "trigger": "StrLen()", "contents": "StrLen(${1:String})" },
             { "trigger": "StrPut()", "contents": "StrPut(${1:String}, ${2:Address}, ${3:[Length]}, ${4:[Encoding = None]})" },
             { "trigger": "StrSplit()", "contents": "StrSplit(${1:String}, ${2:[Delimiters}, ${3:OmitChars]})" },
+            { "trigger": "StrReplace()", "contents": "StrReplace(${1:Haystack}, ${2:SearchText [}, ${3:ReplaceText}, ${4:OutputVarCount}, ${5:Limit := -1]})" },
             { "trigger": "SubStr()", "contents": "SubStr(${1:String}, ${2:StartingPos [}, ${3:Length]})" },
             { "trigger": "Tan(Number)", "contents": "Tan(${1:Number})" },
             { "trigger": "Trim()", "contents": "Trim(${1:String}, ${2:OmitChars = \" `t\"})" },
