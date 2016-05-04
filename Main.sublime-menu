@@ -22,10 +22,10 @@
 				"id": "package-settings",
 				"children":
 				[
-                    {
-                        "caption": "AutoHotkey",
-                        "children":
-                        [
+					{
+						"caption": "AutoHotkey",
+						"children":
+						[
 							{
 								"command": "open_file",
 								"args": {"file": "${packages}/AutoHotkey/AutoHotkey.sublime-settings"},
@@ -35,6 +35,17 @@
 								"command": "open_file",
 								"args": {"file": "${packages}/User/AutoHotkey.sublime-settings"},
 								"caption": "AutoHotkey Settings - User"
+							},
+							{	
+								"caption": "-"
+							},
+							{
+								"command": "open_file",
+								"args": {
+									"file": "${packages}/AutoHotkey/Default (Windows).sublime-keymap",
+									"platform": "Windows"
+								},
+								"caption": "AutoHotkey Key Bindings"
 							}
 						]
 					}
