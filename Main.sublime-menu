@@ -22,10 +22,10 @@
 				"id": "package-settings",
 				"children":
 				[
-                    {
-                        "caption": "AutoHotkey",
-                        "children":
-                        [
+					{
+						"caption": "AutoHotkey",
+						"children":
+						[
 							{
 								"command": "open_file",
 								"args": {"file": "${packages}/AutoHotkey/AutoHotkey.sublime-settings"},
