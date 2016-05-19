@@ -26,7 +26,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(;)(.*)</string>
+			<string>^\s*(;)(.*)$</string>
 			<key>name</key>
 			<string>comment.line.ahk</string>
 		</dict>
@@ -75,7 +75,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^(\w+)(\()(.*)(\))\s*({)\s*(;?.*)$</string>
+			<string>^\s*(\w+)(\()(.*)(\))\s*({)\s*(;?.*)$</string>
 			<key>name</key>
 			<string>functionline.ahk</string>
 		</dict>
