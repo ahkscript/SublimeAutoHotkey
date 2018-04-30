@@ -8,7 +8,22 @@
         "command": "ahkcompile"
     },
 	{
-		"caption": "AutoHotkey - Run As Piped Buffer",
+		"caption": "AHK_L - Run Piped",
 		"command": "ahkrunpiped"
+	},
+	{
+		"caption": "AHK_H - Run Piped",
+		"command": "ahkrunpiped",
+		"args": { "pathToAhkExe" : "AHK_H_v1" }
+	},
+	{
+		"caption": "AHK_L - Run Piped v2",
+		"command": "ahkrunpiped",
+		"args": { "pathToAhkExe" : "AHK_L_v2" }
+	},
+	{
+		"caption": "AHK_H - Run Piped v2",
+		"command": "ahkrunpiped",
+		"args": { "pathToAhkExe" : "AHK_H_v2" }
 	}
 ]

@@ -5,10 +5,20 @@
 	 "id": "tools",
 	 "children":
 		[
-			{ "caption": "-", "id": "packagecommands" },
-			{ "command": "ahkrun", "caption": "AutoHotkey - Run"},
-			{ "command": "ahkcompile", "caption": "AutoHotkey - Compile"},
-			{ "command": "ahkrunpiped", "caption": "AutoHotkey - Run As Piped Buffer", "mnemonic": "P"}
+			{
+				"caption": "AutoHotkey",
+				"id": "autohotkey",
+				"children":
+				[
+					{ "caption": "-", "id": "packagecommands" },
+					{ "command": "ahkrun", "caption": "AHK_L - Run"},
+					{ "command": "ahkcompile", "caption": "AHK_L - Compile"},
+					{ "command": "ahkrunpiped", "caption": "AHK_L - Run Piped"},
+					{ "command": "ahkrunpiped", "caption": "AHK_H - Run Piped", "args": { "pathToAhkExe" : "AHK_H_v1" } },
+					{ "command": "ahkrunpiped", "caption": "AHK_L - Run Piped v2", "args": { "pathToAhkExe" : "AHK_L_v2" } },
+					{ "command": "ahkrunpiped", "caption": "AHK_H - Run Piped v2", "args": { "pathToAhkExe" : "AHK_H_v2" } }
+				]
+			}
 		]
 	},
 	{

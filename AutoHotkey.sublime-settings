@@ -5,22 +5,24 @@
 
     "word_separators": "./\\()\"'-:,.;<>~!@#$^&*|+=[]{}`~?",
 
-    "AutoHotKeyExePath": [ "C:\\Program Files\\AutoHotkey\\AutoHotkey.exe",
-                            "C:\\Program Files\\AutoHotkey\\AutoHotkeyA32.exe",
-                            "C:\\Program Files\\AutoHotkey\\AutoHotkeyU32.exe",
-                            "C:\\Program Files\\AutoHotkey\\AutoHotkeyU64.exe",
-                            "C:\\Program Files (x86)\\AutoHotkey\\AutoHotkey.exe",
-                            "C:\\Program Files (x86)\\AutoHotkey\\AutoHotkeyA32.exe",
-                            "C:\\Program Files (x86)\\AutoHotkey\\AutoHotkeyU32.exe",
-                            "C:\\PortableApps\\AutoHotkey\\AutoHotKey_C\\AutoHotkey.exe",
-                            "C:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\AutoHotkey.exe",
-                            "C:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\AutoHotkeyA32.exe",
-                            "C:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\AutoHotkeyU32.exe",
-                            "C:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\AutoHotkeyU64.exe"],
+    "AHK_L_v1": ["C:\\Program Files\\AutoHotkey\\AutoHotkey.exe",
+                 "C:\\Program Files\\AutoHotkey\\AutoHotkeyA32.exe",
+                 "C:\\Program Files\\AutoHotkey\\AutoHotkeyU32.exe",
+                 "C:\\Program Files\\AutoHotkey\\AutoHotkeyU64.exe"],
 
-    "Ahk2ExePath": [  "C:\\Program Files\\AutoHotkey\\Compiler\\Ahk2Exe.exe",
-                        "C:\\Program Files (x86)\\AutoHotkey\\Compiler\\Ahk2Exe.exe",
-                        "C:\\PortableApps\\AutoHotkey\\AutoHotKey_C\\Compiler\\Ahk2Exe.exe",
-                        "C:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\Compiler\\Ahk2Exe.exe"]
+    "AHK_L_v2": ["C:\\Program Files\\AutoHotkey\\AutoHotkeyU32.exe",
+                 "C:\\Program Files\\AutoHotkey\\AutoHotkeyU64.exe"],
+
+    "AHK_H_v1": ["C:\\Program Files\\AutoHotkey\\Win32a\\AutoHotkey.exe",
+                 "C:\\Program Files\\AutoHotkey\\Win32w\\AutoHotkey.exe",
+                 "C:\\Program Files\\AutoHotkey\\x64w\\AutoHotkey.exe"],
+
+    "AHK_H_v2": ["C:\\Program Files\\AutoHotkey\\Win32w\\AutoHotkey.exe",
+                 "C:\\Program Files\\AutoHotkey\\x64w\\AutoHotkey.exe"],
+
+    "Ahk2ExePath": ["C:\\Program Files\\AutoHotkey\\Compiler\\Ahk2Exe.exe",
+                    "C:\\Program Files (x86)\\AutoHotkey\\Compiler\\Ahk2Exe.exe",
+                    "C:\\PortableApps\\AutoHotkey\\AutoHotKey_C\\Compiler\\Ahk2Exe.exe",
+                    "C:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\Compiler\\Ahk2Exe.exe"]
 
 }

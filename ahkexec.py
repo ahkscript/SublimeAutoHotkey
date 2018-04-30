@@ -118,10 +118,8 @@ class ahkrunpiped(sublime_plugin.TextCommand):
 
 
 class ahkrunpipedCommand(ahkrunpiped):
-
-	def run(self, edit, version='default'):
-
-		AutoHotKeyExePathList = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyExePath")
+	def run(self, edit, version='default', pathToAhkExe = 'AHK_L_v1'):
+		AutoHotKeyExePathList = sublime.load_settings("AutoHotkey.sublime-settings").get(pathToAhkExe)
 		AutoHotKeyExePath = ""
 		for AutoHotKeyExePath in AutoHotKeyExePathList:
 			if os.path.isfile(AutoHotKeyExePath):
