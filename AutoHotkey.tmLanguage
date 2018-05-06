@@ -79,7 +79,7 @@
 			<key>name</key>
 			<string>functionline.ahk</string>
 		</dict>
-		
+
 		<dict>
 			<key>captures</key>
 			<dict>
@@ -150,7 +150,8 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*(#)((?i:includeagain|include))\s+(.*?)\s*(;.*)?$</string>
+			<string>^\s*(#)((?i:includeagain|include))</string>
+			<!-- <string>^\s*(#)((?i:includeagain|include))\s+(.*?)\s*(;.*)?$</string> -->
 			<key>name</key>
 			<string>importline.ahk</string>
 		</dict>
@@ -181,9 +182,11 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*(#)((?i:allowsamelinecomments|clipboardtimeout|commentflag|errorstdout|escapechar|hotkeyinterval|hotkeymodifiertimeout|hotstring|iftimeout|ifwinactive|ifwinexist|ifwinnotactive|ifwinnotexist|if|inputlevel|installkeybdhook|installmousehook|keyhistory|ltrim|maxhotkeysperinterval|maxmem|maxthreadsbuffer|maxthreadsperhotkey|maxthreads|menumaskkey|noenv|notrayicon|persistent|singleinstance|usehook|warn|winactivateforce)),*?\s*?(.*?)\s*(;.*)?$</string>
+			<string>^\s*(#)((?i:allowsamelinecomments|clipboardtimeout|commentflag|errorstdout|escapechar|hotkeyinterval|hotkeymodifiertimeout|hotstring|iftimeout|ifwinactive|ifwinexist|ifwinnotactive|ifwinnotexist|if|inputlevel|installkeybdhook|installmousehook|keyhistory|ltrim|maxhotkeysperinterval|maxmem|maxthreadsbuffer|maxthreadsperhotkey|maxthreads|menumaskkey|noenv|notrayicon|persistent|singleinstance|usehook|warn|winactivateforce))</string>
 			<key>name</key>
 			<string>preprocessordirective.ahk</string>
+			<!-- Original -->
+			<!-- <string>^\s*(#)((?i:allowsamelinecomments|clipboardtimeout|commentflag|errorstdout|escapechar|hotkeyinterval|hotkeymodifiertimeout|hotstring|iftimeout|ifwinactive|ifwinexist|ifwinnotactive|ifwinnotexist|if|inputlevel|installkeybdhook|installmousehook|keyhistory|ltrim|maxhotkeysperinterval|maxmem|maxthreadsbuffer|maxthreadsperhotkey|maxthreads|menumaskkey|noenv|notrayicon|persistent|singleinstance|usehook|warn|winactivateforce)),*?\s*?(.*?)\s*(;.*)?$</string> -->
 		</dict>
 
 		<dict>
