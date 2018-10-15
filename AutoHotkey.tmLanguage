@@ -75,7 +75,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*(\w+)(\()(.*)(\))\s*({)\s*(;?.*)$</string>
+			<string>^(?i)\s*((?!if|while)\w+)(\()(.*)(\))\s*({)\s*(;?.*)$</string>
 			<key>name</key>
 			<string>functionline.ahk</string>
 		</dict>
