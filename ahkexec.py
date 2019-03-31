@@ -4,6 +4,9 @@ import os
 import re
 from ctypes import *
 
+
+BASE_PATH = os.path.abspath(os.path.dirname(__file__))
+
 # The ahkbuild command is called as target by AutoHotkey.sublime-build
 class ahkrun(sublime_plugin.WindowCommand):
 	def run(self):
@@ -160,3 +163,46 @@ class ahkrunpipedCommand(ahkrunpiped):
 
 		# cleanup
 		if hasattr(self, "ahkpath"): del self.ahkpath
+
+
+def OpenAhkHelp(text):
+	AutoHotKeyExePathList = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyExePath")
+	AutoHotKeyExePath = ""
+	for AutoHotKeyExePath in AutoHotKeyExePathList:
+		if os.path.isfile(AutoHotKeyExePath):
+			# print ("Found AutoHotKeyExePath=" + AutoHotKeyExePath)
+			break
+		else:
+			# print ("Not Found AutoHotKeyExePath=" + AutoHotKeyExePath)
+			continue
+	# Also try old settings format where path is stored as a named-key in a dictionary.
+	if not os.path.isfile(AutoHotKeyExePath):
+		AutoHotKeyExePath = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyExePath")["default"]
+
+	helpFilePath = os.path.dirname(AutoHotKeyExePath)
+	helpFilePath = os.path.join(helpFilePath, "AutoHotkey.chm")
+	if os.path.isfile(helpFilePath):
+		fullPath = os.path.join(BASE_PATH, "Help\\KeyHH.exe") + " -#klink " + text + " " + helpFilePath
+		subprocess.Popen(fullPath)
+		sublime.status_message(text)
+	else:
+		sublime.status_message("File not exist in " + helpFilePath)
+
+
+class ahkhelp(sublime_plugin.TextCommand):
+	def run(self, edit):
+		curr_view = self.view
+		curr_sel = curr_view.sel()[0]
+		if curr_view.match_selector(curr_sel.begin(), 'source.ahk'):
+
+			word_end = curr_sel.end()
+			if curr_sel.empty():
+				word = curr_view.substr(curr_view.word(word_end)).lower()
+			else:
+				word = curr_view.substr(curr_sel).lower()
+			if word is None or len(word) <= 1:
+				sublime.status_message('No function selected')
+
+			OpenAhkHelp(word)
+		else:
+			sublime.status_message("No Help Available")

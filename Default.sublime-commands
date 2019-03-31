@@ -7,6 +7,10 @@
         "caption": "AutoHotkey - Compile",
         "command": "ahkcompile"
     },
+    {
+        "caption": "AutoHotkey - Help",
+        "command": "ahkhelp"
+    },
 	{
 		"caption": "AutoHotkey - Run As Piped Buffer",
 		"command": "ahkrunpiped"
