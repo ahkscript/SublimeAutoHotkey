@@ -19,8 +19,7 @@ The ahkrunpiped command will allow you to run your code as a piped text string t
 * If no text is selected - ahkrunpiped will pipe and run the entire contents of the current document.
 
 ## Goto-documentation Integration
-Instructions on how to configure goto-documentation plugin for AutoHotkey (F1 Hotkey will take you to documentation for word under cursor)
-* http://www.autohotkey.com/board/topic/46447-sublime-text-editor-very-nice/page-3#entry540187
+Now press F1 hotkey will take you to documentation for word under cursor.
 
 ## Credits
 * S0und: http://www.autohotkey.com/board/topic/46447-sublime-text-editor-very-nice/page-2#entry529723
