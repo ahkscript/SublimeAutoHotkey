@@ -4,6 +4,10 @@
 
 	"variants": [
 		{
+			"name": "Default",
+			"target": "ahkrun"
+		},
+		{
 			"name": "Run",
 			"target": "ahkcompile"
 		}

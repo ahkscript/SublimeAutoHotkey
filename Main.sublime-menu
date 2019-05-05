@@ -6,9 +6,21 @@
 	 "children":
 		[
 			{ "caption": "-", "id": "packagecommands" },
-			{ "command": "ahkrun", "caption": "AutoHotkey - Run"},
-			{ "command": "ahkcompile", "caption": "AutoHotkey - Compile"},
-			{ "command": "ahkrunpiped", "caption": "AutoHotkey - Run As Piped Buffer", "mnemonic": "P"}
+			{
+				"caption": "AutoHotkey",
+				"children":
+				[
+					{ "command": "ahkrun", "caption": "AutoHotkey Default - Run"},
+					{ "command": "ahkrun", "args": {"version": "classic"}, "caption": "AutoHotkey Classic - Run"},
+					{ "command": "ahkrun", "args": {"version": "lexikos_A32"}, "caption": "AutoHotkey Lexikos_A32 - Run"},
+					{ "command": "ahkrun", "args": {"version": "lexikos_U32"}, "caption": "AutoHotkey Lexikos_U32 - Run"},
+					{ "command": "ahkrun", "args": {"version": "lexikos_U64"}, "caption": "AutoHotkey Lexikos_U64 - Run"},
+					{ "command": "ahkcompile", "caption": "AutoHotkey Default - Compile"},
+					{ "command": "ahkcompile", "args": {"version": "classic"}, "caption": "AutoHotkey Classic - Compile"},
+					{ "command": "ahkcompile", "args": {"version": "lexikos"}, "caption": "AutoHotkey Lexikos - Compile"},
+					{ "command": "ahkrunpiped", "caption": "AutoHotkey - Run As Piped Buffer", "mnemonic": "P"},
+				],
+			},
 		]
 	},
 	{

@@ -1,26 +1,32 @@
 {
+	"word_separators": "./\\()\"'-:,.;<>~!@#$^&*|+=[]{}`~?",
 
-    // Set here path to AutoHotkey.exe executable to use for the build and ahkrunpiped command.
-    // AutoHotKeyExePath and Ahk2ExePath are a list of string paths - starting from the beginning of the list if a path is not found then the subsequent path will be attempted.
+	// Set here path to AutoHotkey.exe and Ahk2Exe.exe executables
+	"AutoHotKeyExePath":
+	{
+		"default": "C:\\Program Files\\AutoHotkey\\AutoHotkeyU32.exe",
+		"classic": "C:\\Program Files\\AutoHotkey\\AutoHotkey.exe",
+		"lexikos_A32": "C:\\Program Files\\AutoHotkey\\AutoHotkeyA32.exe",
+		"lexikos_U32": "C:\\Program Files\\AutoHotkey\\AutoHotkeyU32.exe",
+		"lexikos_U64": "C:\\Program Files\\AutoHotkey\\AutoHotkeyU64.exe",
+		
+		"default_portable": "D:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\AutoHotkeyA32.exe",
+		"classic_portable": "D:\\PortableApps\\AutoHotkey\\AutoHotKey_C\\AutoHotkey.exe",
+		"lexikos_A32_portable": "D:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\AutoHotkeyA32.exe",
+		"lexikos_U32_portable": "D:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\AutoHotkeyU32.exe",
+		"lexikos_U64_portable": "D:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\AutoHotkeyU64.exe",
+	},
 
-    "word_separators": "./\\()\"'-:,.;<>~!@#$^&*|+=[]{}`~?",
-
-    "AutoHotKeyExePath": [ "C:\\Program Files\\AutoHotkey\\AutoHotkey.exe",
-                            "C:\\Program Files\\AutoHotkey\\AutoHotkeyA32.exe",
-                            "C:\\Program Files\\AutoHotkey\\AutoHotkeyU32.exe",
-                            "C:\\Program Files\\AutoHotkey\\AutoHotkeyU64.exe",
-                            "C:\\Program Files (x86)\\AutoHotkey\\AutoHotkey.exe",
-                            "C:\\Program Files (x86)\\AutoHotkey\\AutoHotkeyA32.exe",
-                            "C:\\Program Files (x86)\\AutoHotkey\\AutoHotkeyU32.exe",
-                            "C:\\PortableApps\\AutoHotkey\\AutoHotKey_C\\AutoHotkey.exe",
-                            "C:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\AutoHotkey.exe",
-                            "C:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\AutoHotkeyA32.exe",
-                            "C:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\AutoHotkeyU32.exe",
-                            "C:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\AutoHotkeyU64.exe"],
-
-    "Ahk2ExePath": [  "C:\\Program Files\\AutoHotkey\\Compiler\\Ahk2Exe.exe",
-                        "C:\\Program Files (x86)\\AutoHotkey\\Compiler\\Ahk2Exe.exe",
-                        "C:\\PortableApps\\AutoHotkey\\AutoHotKey_C\\Compiler\\Ahk2Exe.exe",
-                        "C:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\Compiler\\Ahk2Exe.exe"]
+	"Ahk2ExePath":
+	{
+		"default": "C:\\Program Files\\AutoHotkey\\Compiler\\Ahk2Exe.exe",
+		"default_x86": "C:\\Program Files (x86)\\AutoHotkey\\Compiler\\Ahk2Exe.exe",
+		"classic": "C:\\Program Files\\AutoHotkey\\Compiler\\Ahk2Exe.exe",
+		"lexikos": "C:\\Program Files\\AutoHotkey\\Compiler\\Ahk2Exe.exe",
+		
+		"default_portable": "D:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\Compiler\\Ahk2Exe.exe",
+		"classic_portable": "D:\\PortableApps\\AutoHotkey\\AutoHotKey_C\\Compiler\\Ahk2Exe.exe",
+		"lexikos_portable": "D:\\PortableApps\\AutoHotkey\\AutoHotKey_L\\Compiler\\Ahk2Exe.exe",
+	},
 
 }

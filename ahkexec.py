@@ -4,48 +4,71 @@ import os
 import re
 from ctypes import *
 
-# The ahkbuild command is called as target by AutoHotkey.sublime-build
+#---------------------------------------------------------------
+# The ahkrun command is called as target by AutoHotkey.sublime-build
 class ahkrun(sublime_plugin.WindowCommand):
-	def run(self):
-		filepath = self.window.active_view().file_name()
-
-		AutoHotKeyExePathList = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyExePath")
+	def run(self, version="default"):
 		AutoHotKeyExePath = ""
-		for AutoHotKeyExePath in AutoHotKeyExePathList:
-			if os.path.isfile(AutoHotKeyExePath):
-				# print ("Found AutoHotKeyExePath=" + AutoHotKeyExePath)
-				break
-			else:
-				# print ("Not Found AutoHotKeyExePath=" + AutoHotKeyExePath)
-				continue
+
+		AutoHotKeyExePath = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyExePath")[version]
+
 		# Also try old settings format where path is stored as a named-key in a dictionary.
 		if not os.path.isfile(AutoHotKeyExePath):
+			print("AutoHotkey ahkexec.py run(): Trying default version, because could not find AutoHotKeyExePath for version=" + str(version))
 			AutoHotKeyExePath = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyExePath")["default"]
 
-		cmd = [AutoHotKeyExePath, "/ErrorStdOut", filepath]
-		regex = "(.*) \(([0-9]*)\)() : ==> (.*)"
-		self.window.run_command("exec", {"cmd": cmd, "file_regex": regex})
+		# Also try old settings format where path is stored as a list of paths
+		if not os.path.isfile(AutoHotKeyExePath):
+			print("AutoHotkey ahkexec.py run(): Trying string list (without dictionary key-pairs old format), because could not find AutoHotKeyExePath for version=" + str(version) + " or version=default")
+			AutoHotKeyExePathList = sublime.load_settings("AutoHotkey.sublime-settings").get("AutoHotKeyExePath")
+			for AutoHotKeyExePath in AutoHotKeyExePathList:
+				if os.path.isfile(AutoHotKeyExePath):
+					print ("Not valid AutoHotKeyExePath=" + AutoHotKeyExePath)
+					break
+				else:
+					print ("Not valid AutoHotKeyExePath=" + AutoHotKeyExePath)
+					continue
 
+		if not os.path.isfile(AutoHotKeyExePath):
+			print(r"ERROR: AutoHotkey ahkexec.py run(): Could not find AutoHotKeyExePath. Please create a Data\Packages\User\AutoHotkey.sublime-settings file to specify your custom path.")
+		else:
+			filepath = self.window.active_view().file_name()
+			cmd = [AutoHotKeyExePath, "/ErrorStdOut", filepath]
+			regex = "(.*) \(([0-9]*)\)() : ==> (.*)"
+			self.window.run_command("exec", {"cmd": cmd, "file_regex": regex})
+
+#---------------------------------------------------------------
 class ahkcompile(sublime_plugin.WindowCommand):
-	def run(self):
-		filepath = self.window.active_view().file_name()
-
-		Ahk2ExePathList = sublime.load_settings("AutoHotkey.sublime-settings").get("Ahk2ExePath")
+	def run(self, version="default"):
 		Ahk2ExePath = ""
-		for Ahk2ExePath in Ahk2ExePathList:
-			if os.path.isfile(Ahk2ExePath):
-				# print ("Found Ahk2ExePath=" + Ahk2ExePath)
-				break
-			else:
-				# print ("Not Found Ahk2ExePath=" + Ahk2ExePath)
-				continue
+
+		Ahk2ExePath = sublime.load_settings("AutoHotkey.sublime-settings").get("Ahk2ExePath")[version]
+
 		# Also try old settings format where path is stored as a named-key in a dictionary.
 		if not os.path.isfile(Ahk2ExePath):
+			print("AutoHotkey ahkexec.py run(): Trying default version, because could not find Ahk2ExePath for version=" + str(version))
 			Ahk2ExePath = sublime.load_settings("AutoHotkey.sublime-settings").get("Ahk2ExePath")["default"]
 
-		cmd = [Ahk2ExePath, "/in", filepath]
-		self.window.run_command("exec", {"cmd": cmd})
+		# Also try old settings format where path is stored as a list of paths
+		if not os.path.isfile(Ahk2ExePath):
+			print("AutoHotkey ahkexec.py run(): Trying string list (without dictionary key-pairs old format), because could not find Ahk2ExePath for version=" + str(version) + " or version=default")
+			Ahk2ExePathList = sublime.load_settings("AutoHotkey.sublime-settings").get("Ahk2ExePath")
+			for Ahk2ExePath in Ahk2ExePathList:
+				if os.path.isfile(Ahk2ExePath):
+					print ("Not valid Ahk2ExePath=" + Ahk2ExePath)
+					break
+				else:
+					print ("Not valid Ahk2ExePath=" + Ahk2ExePath)
+					continue
 
+		if not os.path.isfile(Ahk2ExePath):
+			print(r"ERROR: AutoHotkey ahkexec.py run(): Could not find Ahk2ExePath. Please create a Data\Packages\User\AutoHotkey.sublime-settings file to specify your custom path.")
+		else:
+			filepath = self.window.active_view().file_name()
+			cmd = [Ahk2ExePath, "/in", filepath]
+			self.window.run_command("exec", {"cmd": cmd})
+
+#---------------------------------------------------------------
 # http://www.autohotkey.com/board/topic/23575-how-to-run-dynamic-script-through-a-pipe/
 # The ahkrunpiped command will run the code in the current buffer by piping it as a temporary string to the AutoHotkey.exe executable. This enables you to run and test AutoHotkey scripts without needing to save them to a file first.
 class ahkrunpiped(sublime_plugin.TextCommand):
