@@ -1,0 +1,9 @@
+<snippet>
+	<content>iconfile = C:\Resources\Icons\exampleimage.ico
+If( !A_IsCompiled && FileExist(iconfile)) {
+	Menu, Tray, Icon, %iconfile%
+}
+
+</content>
+	<scope>source.ahk</scope>
+</snippet>

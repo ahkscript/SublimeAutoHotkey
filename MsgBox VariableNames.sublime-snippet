@@ -1,0 +1,6 @@
+<snippet>
+	<content>MsgBox % "Variable1=" . Variable1
+	 . "`nVariable2=" . Variable2
+	 . "`nVariable3=" . Variable3</content>
+	<scope>source.ahk</scope>
+</snippet>
