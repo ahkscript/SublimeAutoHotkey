@@ -120,7 +120,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*(.+)(::)</string>
+			<string>^\s*(\S+(?:\s+&\s+\S+)*)(::)</string>
 			<key>name</key>
 			<string>hotkeyline.ahk</string>
 		</dict>
