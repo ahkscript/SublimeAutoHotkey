@@ -33,9 +33,9 @@
 
 		<dict>
 			<key>begin</key>
-			<string>^[\t ]*/\*</string>
+			<string>^\s*/\*</string>
 			<key>end</key>
-			<string>^[\t ]*\*/</string>
+			<string>^\s*\*/</string>
 			<key>name</key>
 			<string>comment.block.ahk</string>
 		</dict>
