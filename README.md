@@ -3,7 +3,7 @@ AutoHotkey AHK language package for SublimeText including syntax highlighting, c
 
 ## Package Installation
 * Manual method: Download ZIP from github. Extract the files to [Sublime_Data_Dir](http://docs.sublimetext.info/en/latest/basic_concepts.html#the-data-directory)\Packages\AutoHotkey
-* Automatic method: Install [AutoHotKey](https://packagecontrol.io/packages/AutoHotkey) with Package Control.
+* Automatic method: Install [AutoHotKey](https://packagecontrol.io/packages/AutoHotkey) with [Package Control](https://packagecontrol.io/installation).
 
 ## Key Bindings
 If you have the default Sublime keybindings intact, then:
