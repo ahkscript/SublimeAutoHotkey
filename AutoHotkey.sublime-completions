@@ -134,7 +134,7 @@
             { "trigger": "IniRead", "contents": "IniRead, ${1:OutputVar}, ${2:Filename}, ${3:Section}, ${4:Key [}, ${5:Default]}" },
             { "trigger": "IniWrite", "contents": "IniWrite, ${1:Value}, ${2:Filename}, ${3:Section}, ${4:Key}" },
             { "trigger": "Input", "contents": "Input, ${1:[ OutputVar}, ${2:Options}, ${3:EndKeys}, ${4:MatchList]}" },
-            { "trigger": "InputBox", "contents": "InputBox, ${1:OutputVar [}, ${2:Title}, ${3:Prompt}, ${4:HIDE}, ${5:Width}, ${6:Height}, ${7:X}, ${8:Y}, ${9:Font}, ${10:Timeout}" },
+            { "trigger": "InputBox", "contents": "InputBox, ${1:OutputVar [}, ${2:Title}, ${3:Prompt}, ${4:HIDE}, ${5:Width}, ${6:Height}, ${7:X}, ${8:Y}, ${9:Font}, ${10:Timeout}, ${11:Default]}" },
             { "trigger": "KeyHistory", "contents": "KeyHistory" },
             { "trigger": "KeyWait", "contents": "KeyWait, ${1:KeyName [}, ${2:Options]}" },
             { "trigger": "ListHotkeys", "contents": "ListHotkeys" },
