@@ -338,6 +338,30 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(')</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.ahk</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(')(?!')|^</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.ahk</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.quoted.single.ahk</string>
+		</dict>
 	</array>
 	<key>scopeName</key>
 	<string>source.ahk</string>
