@@ -8,7 +8,7 @@ scope: source.ahk
 version: 2
 contexts:
   main:
-    - match: (^\s*|\s+)(;)(.*)$
+    - match: (^\s*|\s+)(;)(.*)\n$
       scope: comment.line.ahk
       captures:
         1: comment.line.ahk
