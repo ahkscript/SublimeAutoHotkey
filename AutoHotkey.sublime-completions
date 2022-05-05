@@ -1023,6 +1023,45 @@
             { "trigger": "REG_BINARY", "contents": "REG_BINARY" },
             { "trigger": "DPIScale", "contents": "DPIScale" },
             { "trigger": "Hwnd", "contents": "Hwnd" },
-            { "trigger": "Parent", "contents": "Parent" }
+            { "trigger": "Parent", "contents": "Parent" },
+            
+            { "trigger": "ComObject()", "contents": "ComObject(${1:VarType}, ${2:Value [}, ${3:Flags]})" },
+            { "trigger": "Exception()", "contents": "Exception(${1:Message [}, ${2:What}, ${3:Extra]})" },
+            { "trigger": "InputHook()", "contents": "InputHook(${1:[Options}, ${2:EndKeys}, ${3:MatchList]})" },
+            { "trigger": "LoadPicture()", "contents": "LoadPicture(${1:Filename [}, ${2:Options}, ${3:ByRef ImageType]})" },
+            { "trigger": "Max()", "contents": "Max(${1:Number1 [}, ${2:Number2}, ${3:...]})" },
+            { "trigger": "Min()", "contents": "Min(${1:Number1 [}, ${2:Number2}, ${3:...]})" },
+            { "trigger": "OnClipboardChange()", "contents": "OnClipboardChange(${1:Func [}, ${2:AddRemove]})" },
+            { "trigger": "OnError()", "contents": "OnError(${1:Func [}, ${2:AddRemove]})" },
+            { "trigger": "TV_SetImageList()", "contents": "TV_SetImageList(${1:ImageListID [}, ${2:IconType]})" },
+            { "trigger": "Hotstring(String, Replacement, OnOffToggle)", "contents": "Hotstring(${1:String [}, ${2:Replacement}, ${3:OnOffToggle)]})" },
+            { "trigger": "Hotstring(NewOptions)", "contents": "Hotstring(${1:NewOptions})" },
+            { "trigger": "Hotstring(\"EndChars\", NewValue)", "contents": "Hotstring(\"${1:EndChars}\", ${2:NewValue})" },
+            { "trigger": "Hotstring(\"MouseReset\" , NewValue)", "contents": "Hotstring(${1:\"MouseReset\"}, ${2:NewValue})" },
+            { "trigger": "Hotstring(\"Reset\")", "contents": "Hotstring(${1:\"Reset\"})" },
+
+
+            { "trigger": "MenuGetHandle()", "contents": "MenuGetHandle(${1:MenuName})" },
+            { "trigger": "MenuGetName()", "contents": "MenuGetName(${1:Handle})" },
+    
+            { "trigger": "A_ListLines", "contents": "A_ListLines" },
+            { "trigger": "A_SendMode", "contents": "A_SendMode" },
+            { "trigger": "A_SendLevel", "contents": "A_SendLevel" },
+            { "trigger": "A_StoreCapsLockMode", "contents": "A_StoreCapsLockMode" },
+            { "trigger": "A_KeyDuration", "contents": "A_KeyDuration" },
+            { "trigger": "A_KeyDelayPlay", "contents": "A_KeyDelayPlay" },
+            { "trigger": "A_KeyDurationPlay", "contents": "A_KeyDurationPlay" },
+            { "trigger": "A_MouseDelayPlay", "contents": "A_MouseDelayPlay" },
+            { "trigger": "A_CoordModeToolTip", "contents": "A_CoordModeToolTip" },
+            { "trigger": "A_CoordModePixel", "contents": "A_CoordModePixel" },
+            { "trigger": "A_CoordModeMouse", "contents": "A_CoordModeMouse" },
+            { "trigger": "A_CoordModeCaret", "contents": "A_CoordModeCaret" },
+            { "trigger": "A_CoordModeMenu", "contents": "A_CoordModeMenu" },
+            { "trigger": "A_TimeIdleKeyboard", "contents": "A_TimeIdleKeyboard" },
+            { "trigger": "A_TimeIdleMouse", "contents": "A_TimeIdleMouse" },
+            { "trigger": "A_DefaultGui", "contents": "A_DefaultGui" },
+            { "trigger": "A_DefaultListView", "contents": "A_DefaultListView" },
+            { "trigger": "A_DefaultTreeView", "contents": "A_DefaultTreeView" },
+            { "trigger": "A_ComSpec", "contents": "A_ComSpec" }
 ]
 }
